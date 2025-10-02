@@ -1,5 +1,7 @@
 #pragma once
 #include <string>
+#include <iostream>
+#include <cmath>
 typedef struct {
     char** data;   // Указатель на двумерный массив
     int rows;      // Количество строк
