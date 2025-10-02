@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 typedef struct {
-    char** data; // Указатель на двумерный массив
+    char** data;   // Указатель на двумерный массив
     int rows;      // Количество строк
     int cols;      // Количество столбцов
 } Matrix;
