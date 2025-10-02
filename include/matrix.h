@@ -10,7 +10,7 @@ typedef struct {
 
 // Базовые функции
 Matrix create_matrix(int rows, int cols);
-void   free_matrix(Matrix m);
+void   free_matrix(Matrix& m);
 
 
 // Вспомогательные функции

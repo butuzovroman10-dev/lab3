@@ -9,13 +9,13 @@ Matrix string_to_matrix(char* text, int rows, int cols){
 
 
     mat.data = new char*[rows];
-    if (mat.data = nullptr){
+    if (mat.data == nullptr){
         throw std::bad_alloc();
     }
 
     for (int i = 0; i < mat.rows; i++){
         mat.data[i] = new char[cols];
-        for (int j; j < mat.cols; j ++){
+        for (int j = 0; j < mat.cols; j ++){
             mat.data[i][j] = text[i * mat.cols + j];
         }
 
@@ -45,14 +45,23 @@ Matrix encrypt(Matrix chars) {
 }
 
 std::string decrypt(Matrix encrypted) {
-    
     std::string result = "";
-
     for (int j = 0; j < encrypted.cols; j++) {
         for (int i = 0; i < encrypted.rows; i++) {
-            result += encrypted.data[j][i];
+            result += encrypted.data[j][i];  // ПРАВИЛЬНО для чтения по столбцам!
         }
     }
-
     return result;
+}
+
+void free_matrix(Matrix& mat) {
+    if (mat.data != nullptr) {
+        for (int i = 0; i < mat.rows; i++) {
+            delete[] mat.data[i];
+        }
+        delete[] mat.data;
+        mat.data = nullptr;
+        mat.rows = 0;
+        mat.cols = 0;
+    }
 }

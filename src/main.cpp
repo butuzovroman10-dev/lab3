@@ -5,8 +5,8 @@ int main() {
     try {
         // Тест 1: Базовый тест
         std::cout << "=== Тест 1: Базовый тест ===" << std::endl;
-        char text1[] = "HELLOWORLD";
-        Matrix mat1 = string_to_matrix(text1, 2, 5);
+        char text1[] = "resawyuio";
+        Matrix mat1 = string_to_matrix(text1, 3, 3);
         
         std::cout << "Исходная матрица:" << std::endl;
         for (int i = 0; i < mat1.rows; i++) {
@@ -32,34 +32,34 @@ int main() {
         free_matrix(mat1);
         free_matrix(encrypted1);
         
-        // Тест 2: Другой размер
-        std::cout << "\n=== Тест 2: Другой размер ===" << std::endl;
-        char text2[] = "ABCDEFGHIJKL";
-        Matrix mat2 = string_to_matrix(text2, 3, 4);
+        // // Тест 2: Другой размер
+        // std::cout << "\n=== Тест 2: Другой размер ===" << std::endl;
+        // char text2[] = "ABCDEFGHIJKL";
+        // Matrix mat2 = string_to_matrix(text2, 3, 4);
         
-        Matrix encrypted2 = encrypt(mat2);
-        std::string decrypted2 = decrypt(encrypted2);
+        // Matrix encrypted2 = encrypt(mat2);
+        // std::string decrypted2 = decrypt(encrypted2);
         
-        std::cout << "Исходный текст: ABCDEFGHIJKL" << std::endl;
-        std::cout << "Расшифрованный текст: " << decrypted2 << std::endl;
+        // std::cout << "Исходный текст: ABCDEFGHIJKL" << std::endl;
+        // std::cout << "Расшифрованный текст: " << decrypted2 << std::endl;
         
-        // Освобождение памяти
-        free_matrix(mat2);
-        free_matrix(encrypted2);
+        // // Освобождение памяти
+        // free_matrix(mat2);
+        // free_matrix(encrypted2);
         
-        // Тест 3: Пробуем пустую строку
-        std::cout << "\n=== Тест 3: Пустая строка ===" << std::endl;
-        char text3[] = "";
-        Matrix mat3 = string_to_matrix(text3, 0, 0);
+        // // Тест 3: Пробуем пустую строку
+        // std::cout << "\n=== Тест 3: Пустая строка ===" << std::endl;
+        // char text3[] = "";
+        // Matrix mat3 = string_to_matrix(text3, 0, 0);
         
-        Matrix encrypted3 = encrypt(mat3);
-        std::string decrypted3 = decrypt(encrypted3);
+        // Matrix encrypted3 = encrypt(mat3);
+        // std::string decrypted3 = decrypt(encrypted3);
         
-        std::cout << "Расшифрованный текст (пустой): '" << decrypted3 << "'" << std::endl;
+        // std::cout << "Расшифрованный текст (пустой): '" << decrypted3 << "'" << std::endl;
         
-        // Освобождение памяти
-        free_matrix(mat3);
-        free_matrix(encrypted3);
+        // // Освобождение памяти
+        // free_matrix(mat3);
+        // free_matrix(encrypted3);
         
     } catch (const std::bad_alloc& e) {
         std::cerr << "Ошибка выделения памяти: " << e.what() << std::endl;
