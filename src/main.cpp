@@ -133,7 +133,7 @@ int main() {
         std::cerr << "Произошла ошибка: " << e.what() << std::endl;
         return 1;
     } catch (...) {
-        std::cerr << "Произошла неизвестная ошибка" << std::endl;
+        std::cerr << "Произошла неизвестная ошибка." << std::endl;
         return 1;
     }
     
