@@ -1,0 +1,109 @@
+\doxysection{Файл src/main.cpp}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+
+
+Основной файл приложения для тестирования шифровальщика  
+
+
+{\ttfamily \#include "{}../include/matrix.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_aefa0b77e331d081e72b3d6a71fba2399}{test\+\_\+phrase}} (const char \texorpdfstring{$\ast$}{*}phrase, const std\+::string \&description)
+\begin{DoxyCompactList}\small\item\em Тестирует шифрование и дешифрование для заданной фразы \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Главная функция приложения \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Основной файл приложения для тестирования шифровальщика 
+
+\begin{DoxyAuthor}{Автор}
+Ваше Имя 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+2024
+\end{DoxyDate}
+Содержит тестовые функции для демонстрации работы шифровальщика методом транспонирования матрицы. 
+
+См. определение в файле \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{main_8cpp_doc-func-members}
+\doxysubsection{Функции}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Главная функция приложения 
+
+Содержит набор тестов для демонстрации работы шифровальщика.
+
+\begin{DoxyReturn}{Возвращает}
+int Код завершения программы (0 -\/ успех, 1 -\/ ошибка)
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Тест}
+\item[\mbox{\hyperlink{test__test000001}{Тест}}]Тест с фразой "{}ПРИВЕТМИР"{} из задания 
+
+Тест с английским текстом 
+
+Тест с разной длиной текста \end{DoxyRefDesc}
+
+
+См. определение в файле \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}} строка \mbox{\hyperlink{main_8cpp_source_l00093}{93}}
+
+
+
+Перекрестные ссылки \mbox{\hyperlink{main_8cpp_source_l00030}{test\+\_\+phrase()}}.
+
+\Hypertarget{main_8cpp_aefa0b77e331d081e72b3d6a71fba2399}\index{main.cpp@{main.cpp}!test\_phrase@{test\_phrase}}
+\index{test\_phrase@{test\_phrase}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_phrase()}{test\_phrase()}}
+{\footnotesize\ttfamily \label{main_8cpp_aefa0b77e331d081e72b3d6a71fba2399} 
+void test\+\_\+phrase (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{phrase}{, }\item[{const std\+::string \&}]{description}{}\end{DoxyParamCaption})}
+
+
+
+Тестирует шифрование и дешифрование для заданной фразы 
+
+Функция выполняет полный цикл\+:
+\begin{DoxyEnumerate}
+\item Преобразование текста в матрицу
+\item Шифрование транспонированием
+\item Дешифрование обратным транспонированием
+\item Проверка результата
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Аргументы}
+{\em phrase} & Текст для тестирования \\
+\hline
+{\em description} & Описание теста для вывода\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{См. также}
+\doxylink{matrix_8h_a62ecbfd8f86933f9266ae486870f42a2}{encrypt} 
+
+\doxylink{matrix_8h_a73d588a15e8351ecfb0728bfe7b558db}{decrypt} 
+
+\doxylink{matrix_8h_acbd158760e3fff7679862d23458286b5}{string\+\_\+to\+\_\+matrix} 
+\end{DoxySeeAlso}
+
+
+См. определение в файле \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}} строка \mbox{\hyperlink{main_8cpp_source_l00030}{30}}
+
+
+
+Перекрестные ссылки \mbox{\hyperlink{matrix_8cpp_source_l00106}{calculate\+\_\+matrix\+\_\+size()}}, \mbox{\hyperlink{matrix_8h_source_l00017}{Matrix\+::cols}}, \mbox{\hyperlink{matrix_8h_source_l00015}{Matrix\+::data}}, \mbox{\hyperlink{matrix_8cpp_source_l00063}{decrypt()}}, \mbox{\hyperlink{matrix_8cpp_source_l00050}{encrypt()}}, \mbox{\hyperlink{matrix_8cpp_source_l00020}{free\+\_\+matrix()}}, \mbox{\hyperlink{matrix_8cpp_source_l00096}{print\+\_\+matrix()}}, \mbox{\hyperlink{matrix_8h_source_l00016}{Matrix\+::rows}} и \mbox{\hyperlink{matrix_8cpp_source_l00032}{string\+\_\+to\+\_\+matrix()}}.
+
+
+
+Используется в \mbox{\hyperlink{main_8cpp_source_l00093}{main()}}.
+

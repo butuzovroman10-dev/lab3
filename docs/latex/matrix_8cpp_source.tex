@@ -1,0 +1,115 @@
+\doxysection{matrix.\+cpp}
+\hypertarget{matrix_8cpp_source}{}\label{matrix_8cpp_source}\index{src/matrix.cpp@{src/matrix.cpp}}
+\mbox{\hyperlink{matrix_8cpp}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{matrix_8h}{../include/matrix.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00003}\mbox{\hyperlink{matrix_8h_a00b3eed9347d1300084aa9b4b59faa14}{00003}}\ \mbox{\hyperlink{struct_matrix}{Matrix}}\ \mbox{\hyperlink{matrix_8cpp_a00b3eed9347d1300084aa9b4b59faa14}{create\_matrix}}(\textcolor{keywordtype}{int}\ rows,\ \textcolor{keywordtype}{int}\ cols)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00004}00004\ \ \ \ \ \mbox{\hyperlink{struct_matrix}{Matrix}}\ mat;}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00005}00005\ \ \ \ \ mat.\mbox{\hyperlink{struct_matrix_a994b1578e9a64d5cc3c4d0b11d7532a9}{rows}}\ =\ rows;}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00006}00006\ \ \ \ \ mat.\mbox{\hyperlink{struct_matrix_a2067cc7ed367cc427cd869b3e1074ad7}{cols}}\ =\ cols;}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00007}00007\ \ \ \ \ mat.\mbox{\hyperlink{struct_matrix_a10f53199e1e7abd31c091bde65c83025}{data}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{char}*[rows];}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00008}00008\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00009}00009\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ rows;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ mat.\mbox{\hyperlink{struct_matrix_a10f53199e1e7abd31c091bde65c83025}{data}}[i]\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{char}[cols];}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Инициализируем\ пробелами}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ cols;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ mat.\mbox{\hyperlink{struct_matrix_a10f53199e1e7abd31c091bde65c83025}{data}}[i][j]\ =\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00016}00016\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{return}\ mat;}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00020}\mbox{\hyperlink{matrix_8h_aeb634f45f24e14880fefdc366918b590}{00020}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{matrix_8cpp_a1181a0d8ae532f38fff4b77dff0fb5e5}{free\_matrix}}(\mbox{\hyperlink{struct_matrix}{Matrix}}\&\ mat)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{if}\ (mat.\mbox{\hyperlink{struct_matrix_a10f53199e1e7abd31c091bde65c83025}{data}}\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ mat.\mbox{\hyperlink{struct_matrix_a994b1578e9a64d5cc3c4d0b11d7532a9}{rows}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ mat.\mbox{\hyperlink{struct_matrix_a10f53199e1e7abd31c091bde65c83025}{data}}[i];}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ mat.\mbox{\hyperlink{struct_matrix_a10f53199e1e7abd31c091bde65c83025}{data}};}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ mat.\mbox{\hyperlink{struct_matrix_a10f53199e1e7abd31c091bde65c83025}{data}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ mat.\mbox{\hyperlink{struct_matrix_a994b1578e9a64d5cc3c4d0b11d7532a9}{rows}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ mat.\mbox{\hyperlink{struct_matrix_a2067cc7ed367cc427cd869b3e1074ad7}{cols}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00032}\mbox{\hyperlink{matrix_8h_acbd158760e3fff7679862d23458286b5}{00032}}\ \mbox{\hyperlink{struct_matrix}{Matrix}}\ \mbox{\hyperlink{matrix_8cpp_acbd158760e3fff7679862d23458286b5}{string\_to\_matrix}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ text,\ \textcolor{keywordtype}{int}\ rows,\ \textcolor{keywordtype}{int}\ cols)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{struct_matrix}{Matrix}}\ mat\ =\ \mbox{\hyperlink{matrix_8cpp_a00b3eed9347d1300084aa9b4b59faa14}{create\_matrix}}(rows,\ cols);}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00034}00034\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordtype}{int}\ text\_length\ =\ strlen(text);}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordtype}{int}\ pos\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00037}00037\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ rows;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ cols;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pos\ <\ text\_length)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat.\mbox{\hyperlink{struct_matrix_a10f53199e1e7abd31c091bde65c83025}{data}}[i][j]\ =\ text[pos++];}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Остальные\ ячейки\ остаются\ с\ пробелами}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00046}00046\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{return}\ mat;}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00048}00048\ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00050}\mbox{\hyperlink{matrix_8h_a62ecbfd8f86933f9266ae486870f42a2}{00050}}\ \mbox{\hyperlink{struct_matrix}{Matrix}}\ \mbox{\hyperlink{matrix_8cpp_a62ecbfd8f86933f9266ae486870f42a2}{encrypt}}(\mbox{\hyperlink{struct_matrix}{Matrix}}\ chars)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{comment}{//\ При\ транспонировании\ строки\ становятся\ столбцами\ и\ наоборот}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00052}00052\ \ \ \ \ \mbox{\hyperlink{struct_matrix}{Matrix}}\ result\ =\ \mbox{\hyperlink{matrix_8cpp_a00b3eed9347d1300084aa9b4b59faa14}{create\_matrix}}(chars.\mbox{\hyperlink{struct_matrix_a2067cc7ed367cc427cd869b3e1074ad7}{cols}},\ chars.\mbox{\hyperlink{struct_matrix_a994b1578e9a64d5cc3c4d0b11d7532a9}{rows}});}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00053}00053\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ chars.\mbox{\hyperlink{struct_matrix_a994b1578e9a64d5cc3c4d0b11d7532a9}{rows}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ chars.\mbox{\hyperlink{struct_matrix_a2067cc7ed367cc427cd869b3e1074ad7}{cols}};\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{struct_matrix_a10f53199e1e7abd31c091bde65c83025}{data}}[j][i]\ =\ chars.\mbox{\hyperlink{struct_matrix_a10f53199e1e7abd31c091bde65c83025}{data}}[i][j];}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00059}00059\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00061}00061\ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00063}\mbox{\hyperlink{matrix_8h_a73d588a15e8351ecfb0728bfe7b558db}{00063}}\ std::string\ \mbox{\hyperlink{matrix_8cpp_a73d588a15e8351ecfb0728bfe7b558db}{decrypt}}(\mbox{\hyperlink{struct_matrix}{Matrix}}\ encrypted)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00064}00064\ \ \ \ \ std::string\ result\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00065}00065\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00066}00066\ \ \ \ \ \textcolor{comment}{//\ Для\ обратного\ преобразования\ создаем\ временную\ матрицу}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00067}00067\ \ \ \ \ \textcolor{comment}{//\ Меняем\ размеры\ обратно}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00068}00068\ \ \ \ \ \mbox{\hyperlink{struct_matrix}{Matrix}}\ temp\ =\ \mbox{\hyperlink{matrix_8cpp_a00b3eed9347d1300084aa9b4b59faa14}{create\_matrix}}(encrypted.\mbox{\hyperlink{struct_matrix_a2067cc7ed367cc427cd869b3e1074ad7}{cols}},\ encrypted.\mbox{\hyperlink{struct_matrix_a994b1578e9a64d5cc3c4d0b11d7532a9}{rows}});}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00069}00069\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00070}00070\ \ \ \ \ \textcolor{comment}{//\ Транспонируем\ обратно}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ encrypted.\mbox{\hyperlink{struct_matrix_a994b1578e9a64d5cc3c4d0b11d7532a9}{rows}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ encrypted.\mbox{\hyperlink{struct_matrix_a2067cc7ed367cc427cd869b3e1074ad7}{cols}};\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ temp.\mbox{\hyperlink{struct_matrix_a10f53199e1e7abd31c091bde65c83025}{data}}[j][i]\ =\ encrypted.\mbox{\hyperlink{struct_matrix_a10f53199e1e7abd31c091bde65c83025}{data}}[i][j];}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00076}00076\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00077}00077\ \ \ \ \ \textcolor{comment}{//\ Считываем\ построчно\ из\ временной\ матрицы}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00078}00078\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ temp.\mbox{\hyperlink{struct_matrix_a994b1578e9a64d5cc3c4d0b11d7532a9}{rows}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ temp.\mbox{\hyperlink{struct_matrix_a2067cc7ed367cc427cd869b3e1074ad7}{cols}};\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (temp.\mbox{\hyperlink{struct_matrix_a10f53199e1e7abd31c091bde65c83025}{data}}[i][j]\ !=\ \textcolor{charliteral}{'\ '})\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result\ +=\ temp.\mbox{\hyperlink{struct_matrix_a10f53199e1e7abd31c091bde65c83025}{data}}[i][j];}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00085}00085\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00086}00086\ \ \ \ \ \mbox{\hyperlink{matrix_8cpp_a1181a0d8ae532f38fff4b77dff0fb5e5}{free\_matrix}}(temp);}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00087}00087\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00088}00088\ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00090}\mbox{\hyperlink{matrix_8h_a082df8e5259ca34f0cab0f5f7c7cea74}{00090}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{matrix_8cpp_a082df8e5259ca34f0cab0f5f7c7cea74}{is\_perfect\_square}}(\textcolor{keywordtype}{int}\ n)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00091}00091\ \ \ \ \ \textcolor{keywordflow}{if}\ (n\ <\ 0)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00092}00092\ \ \ \ \ \textcolor{keywordtype}{int}\ root\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(std::sqrt(n));}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00093}00093\ \ \ \ \ \textcolor{keywordflow}{return}\ root\ *\ root\ ==\ n;}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00094}00094\ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00096}\mbox{\hyperlink{matrix_8h_a8838129454e96f6608599019e1e06fe4}{00096}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{matrix_8cpp_a8838129454e96f6608599019e1e06fe4}{print\_matrix}}(\mbox{\hyperlink{struct_matrix}{Matrix}}\ mat)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00097}00097\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ mat.\mbox{\hyperlink{struct_matrix_a994b1578e9a64d5cc3c4d0b11d7532a9}{rows}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}|\ "{}};}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ mat.\mbox{\hyperlink{struct_matrix_a2067cc7ed367cc427cd869b3e1074ad7}{cols}};\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ mat.\mbox{\hyperlink{struct_matrix_a10f53199e1e7abd31c091bde65c83025}{data}}[i][j]\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00103}00103\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00104}00104\ \}}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00106}\mbox{\hyperlink{matrix_8h_a666612825f825ee5db9d15a8ec5d12b0}{00106}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{matrix_8cpp_a666612825f825ee5db9d15a8ec5d12b0}{calculate\_matrix\_size}}(\textcolor{keywordtype}{int}\ text\_length)\ \{}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00107}00107\ \ \ \ \ \textcolor{keywordtype}{int}\ size\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(std::ceil(std::sqrt(text\_length)));}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00108}00108\ \ \ \ \ \textcolor{keywordflow}{return}\ size;}
+\DoxyCodeLine{\Hypertarget{matrix_8cpp_source_l00109}00109\ \}}
+
+\end{DoxyCode}

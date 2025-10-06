@@ -1,0 +1,310 @@
+\doxysection{Файл src/matrix.cpp}
+\hypertarget{matrix_8cpp}{}\label{matrix_8cpp}\index{src/matrix.cpp@{src/matrix.cpp}}
+{\ttfamily \#include "{}../include/matrix.\+h"{}}\newline
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{matrix_8cpp_a00b3eed9347d1300084aa9b4b59faa14}{create\+\_\+matrix}} (int rows, int cols)
+\begin{DoxyCompactList}\small\item\em Создает новую матрицу заданного размера \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matrix_8cpp_a1181a0d8ae532f38fff4b77dff0fb5e5}{free\+\_\+matrix}} (\mbox{\hyperlink{struct_matrix}{Matrix}} \&mat)
+\begin{DoxyCompactList}\small\item\em Освобождает память, занятую матрицей \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{matrix_8cpp_acbd158760e3fff7679862d23458286b5}{string\+\_\+to\+\_\+matrix}} (const char \texorpdfstring{$\ast$}{*}text, int rows, int cols)
+\begin{DoxyCompactList}\small\item\em Преобразует строку в матрицу символов \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_matrix}{Matrix}} \mbox{\hyperlink{matrix_8cpp_a62ecbfd8f86933f9266ae486870f42a2}{encrypt}} (\mbox{\hyperlink{struct_matrix}{Matrix}} chars)
+\begin{DoxyCompactList}\small\item\em Шифрует матрицу методом транспонирования \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{matrix_8cpp_a73d588a15e8351ecfb0728bfe7b558db}{decrypt}} (\mbox{\hyperlink{struct_matrix}{Matrix}} encrypted)
+\begin{DoxyCompactList}\small\item\em Дешифрует матрицу, выполняя обратное транспонирование \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{matrix_8cpp_a082df8e5259ca34f0cab0f5f7c7cea74}{is\+\_\+perfect\+\_\+square}} (int n)
+\begin{DoxyCompactList}\small\item\em Проверяет, является ли число полным квадратом \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matrix_8cpp_a8838129454e96f6608599019e1e06fe4}{print\+\_\+matrix}} (\mbox{\hyperlink{struct_matrix}{Matrix}} mat)
+\begin{DoxyCompactList}\small\item\em Выводит матрицу в удобочитаемом формате \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{matrix_8cpp_a666612825f825ee5db9d15a8ec5d12b0}{calculate\+\_\+matrix\+\_\+size}} (int text\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Вычисляет оптимальный размер матрицы для текста \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{matrix_8cpp_doc-func-members}
+\doxysubsection{Функции}
+\Hypertarget{matrix_8cpp_a666612825f825ee5db9d15a8ec5d12b0}\index{matrix.cpp@{matrix.cpp}!calculate\_matrix\_size@{calculate\_matrix\_size}}
+\index{calculate\_matrix\_size@{calculate\_matrix\_size}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{calculate\_matrix\_size()}{calculate\_matrix\_size()}}
+{\footnotesize\ttfamily \label{matrix_8cpp_a666612825f825ee5db9d15a8ec5d12b0} 
+int calculate\+\_\+matrix\+\_\+size (\begin{DoxyParamCaption}\item[{int}]{text\+\_\+length}{}\end{DoxyParamCaption})}
+
+
+
+Вычисляет оптимальный размер матрицы для текста 
+
+Функция вычисляет минимальный размер квадратной матрицы, который может вместить все символы текста.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em text\+\_\+length} & Длина текста \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+int Размер матрицы (строки = столбцы = возвращаемое значение)
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{matrix_8h_a666612825f825ee5db9d15a8ec5d12b0}{calculate\_matrix\_size}}(9);\ \ \textcolor{comment}{//\ 3\ (3x3=9)}}
+\DoxyCodeLine{\mbox{\hyperlink{matrix_8h_a666612825f825ee5db9d15a8ec5d12b0}{calculate\_matrix\_size}}(10);\ \textcolor{comment}{//\ 4\ (4x4=16,\ хватит\ для\ 10\ символов)}}
+
+\end{DoxyCode}
+ 
+
+См. определение в файле \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}} строка \mbox{\hyperlink{matrix_8cpp_source_l00106}{106}}
+
+
+
+Используется в \mbox{\hyperlink{main_8cpp_source_l00030}{test\+\_\+phrase()}}.
+
+\Hypertarget{matrix_8cpp_a00b3eed9347d1300084aa9b4b59faa14}\index{matrix.cpp@{matrix.cpp}!create\_matrix@{create\_matrix}}
+\index{create\_matrix@{create\_matrix}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{create\_matrix()}{create\_matrix()}}
+{\footnotesize\ttfamily \label{matrix_8cpp_a00b3eed9347d1300084aa9b4b59faa14} 
+\mbox{\hyperlink{struct_matrix}{Matrix}} create\+\_\+matrix (\begin{DoxyParamCaption}\item[{int}]{rows}{, }\item[{int}]{cols}{}\end{DoxyParamCaption})}
+
+
+
+Создает новую матрицу заданного размера 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em rows} & Количество строк \\
+\hline
+{\em cols} & Количество столбцов \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+\doxylink{struct_matrix}{Matrix} Созданная матрица, заполненная пробелами 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::bad\+\_\+alloc} & Если не удалось выделить память \\
+\hline
+\end{DoxyExceptions}
+
+
+См. определение в файле \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}} строка \mbox{\hyperlink{matrix_8cpp_source_l00003}{3}}
+
+
+
+Перекрестные ссылки \mbox{\hyperlink{matrix_8h_source_l00017}{Matrix\+::cols}}, \mbox{\hyperlink{matrix_8h_source_l00015}{Matrix\+::data}} и \mbox{\hyperlink{matrix_8h_source_l00016}{Matrix\+::rows}}.
+
+
+
+Используется в \mbox{\hyperlink{matrix_8cpp_source_l00063}{decrypt()}}, \mbox{\hyperlink{matrix_8cpp_source_l00050}{encrypt()}} и \mbox{\hyperlink{matrix_8cpp_source_l00032}{string\+\_\+to\+\_\+matrix()}}.
+
+\Hypertarget{matrix_8cpp_a73d588a15e8351ecfb0728bfe7b558db}\index{matrix.cpp@{matrix.cpp}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily \label{matrix_8cpp_a73d588a15e8351ecfb0728bfe7b558db} 
+std\+::string decrypt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}}}]{encrypted}{}\end{DoxyParamCaption})}
+
+
+
+Дешифрует матрицу, выполняя обратное транспонирование 
+
+Функция восстанавливает исходное сообщение из зашифрованной матрицы путем обратного транспонирования.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em encrypted} & Зашифрованная матрица \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+std\+::string Расшифрованная строка
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{См. также}
+\doxylink{matrix_8h_a62ecbfd8f86933f9266ae486870f42a2}{encrypt} 
+\end{DoxySeeAlso}
+
+
+См. определение в файле \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}} строка \mbox{\hyperlink{matrix_8cpp_source_l00063}{63}}
+
+
+
+Перекрестные ссылки \mbox{\hyperlink{matrix_8h_source_l00017}{Matrix\+::cols}}, \mbox{\hyperlink{matrix_8cpp_source_l00003}{create\+\_\+matrix()}}, \mbox{\hyperlink{matrix_8h_source_l00015}{Matrix\+::data}}, \mbox{\hyperlink{matrix_8cpp_source_l00020}{free\+\_\+matrix()}} и \mbox{\hyperlink{matrix_8h_source_l00016}{Matrix\+::rows}}.
+
+
+
+Используется в \mbox{\hyperlink{main_8cpp_source_l00030}{test\+\_\+phrase()}}.
+
+\Hypertarget{matrix_8cpp_a62ecbfd8f86933f9266ae486870f42a2}\index{matrix.cpp@{matrix.cpp}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily \label{matrix_8cpp_a62ecbfd8f86933f9266ae486870f42a2} 
+\mbox{\hyperlink{struct_matrix}{Matrix}} encrypt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}}}]{chars}{}\end{DoxyParamCaption})}
+
+
+
+Шифрует матрицу методом транспонирования 
+
+Функция выполняет транспонирование матрицы -\/ строки становятся столбцами и наоборот. Это основной метод шифрования в проекте.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em chars} & Исходная матрица для шифрования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+\doxylink{struct_matrix}{Matrix} Транспонированная (зашифрованная) матрица
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{См. также}
+\doxylink{matrix_8h_a73d588a15e8351ecfb0728bfe7b558db}{decrypt}
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Пример:}}
+\DoxyCodeLine{\textcolor{comment}{//\ Исходная\ матрица:}}
+\DoxyCodeLine{\textcolor{comment}{//\ |\ A\ B\ |}}
+\DoxyCodeLine{\textcolor{comment}{//\ |\ C\ D\ |}}
+\DoxyCodeLine{\textcolor{comment}{//\ После\ encrypt:}}
+\DoxyCodeLine{\textcolor{comment}{//\ |\ A\ C\ |}}
+\DoxyCodeLine{\textcolor{comment}{//\ |\ B\ D\ |}}
+
+\end{DoxyCode}
+ 
+
+См. определение в файле \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}} строка \mbox{\hyperlink{matrix_8cpp_source_l00050}{50}}
+
+
+
+Перекрестные ссылки \mbox{\hyperlink{matrix_8h_source_l00017}{Matrix\+::cols}}, \mbox{\hyperlink{matrix_8cpp_source_l00003}{create\+\_\+matrix()}}, \mbox{\hyperlink{matrix_8h_source_l00015}{Matrix\+::data}} и \mbox{\hyperlink{matrix_8h_source_l00016}{Matrix\+::rows}}.
+
+
+
+Используется в \mbox{\hyperlink{main_8cpp_source_l00030}{test\+\_\+phrase()}}.
+
+\Hypertarget{matrix_8cpp_a1181a0d8ae532f38fff4b77dff0fb5e5}\index{matrix.cpp@{matrix.cpp}!free\_matrix@{free\_matrix}}
+\index{free\_matrix@{free\_matrix}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{free\_matrix()}{free\_matrix()}}
+{\footnotesize\ttfamily \label{matrix_8cpp_a1181a0d8ae532f38fff4b77dff0fb5e5} 
+void free\+\_\+matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+
+
+Освобождает память, занятую матрицей 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em m} & Ссылка на матрицу для освобождения \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}} строка \mbox{\hyperlink{matrix_8cpp_source_l00020}{20}}
+
+
+
+Перекрестные ссылки \mbox{\hyperlink{matrix_8h_source_l00017}{Matrix\+::cols}}, \mbox{\hyperlink{matrix_8h_source_l00015}{Matrix\+::data}} и \mbox{\hyperlink{matrix_8h_source_l00016}{Matrix\+::rows}}.
+
+
+
+Используется в \mbox{\hyperlink{matrix_8cpp_source_l00063}{decrypt()}} и \mbox{\hyperlink{main_8cpp_source_l00030}{test\+\_\+phrase()}}.
+
+\Hypertarget{matrix_8cpp_a082df8e5259ca34f0cab0f5f7c7cea74}\index{matrix.cpp@{matrix.cpp}!is\_perfect\_square@{is\_perfect\_square}}
+\index{is\_perfect\_square@{is\_perfect\_square}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_perfect\_square()}{is\_perfect\_square()}}
+{\footnotesize\ttfamily \label{matrix_8cpp_a082df8e5259ca34f0cab0f5f7c7cea74} 
+bool is\+\_\+perfect\+\_\+square (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Проверяет, является ли число полным квадратом 
+
+Используется для определения, можно ли текст разместить в квадратной матрице без остатка.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em n} & Число для проверки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true Если число является полным квадратом 
+
+false Если число не является полным квадратом
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{matrix_8h_a082df8e5259ca34f0cab0f5f7c7cea74}{is\_perfect\_square}}(9);\ \ \textcolor{comment}{//\ true\ (3*3=9)}}
+\DoxyCodeLine{\mbox{\hyperlink{matrix_8h_a082df8e5259ca34f0cab0f5f7c7cea74}{is\_perfect\_square}}(10);\ \textcolor{comment}{//\ false}}
+
+\end{DoxyCode}
+ 
+
+См. определение в файле \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}} строка \mbox{\hyperlink{matrix_8cpp_source_l00090}{90}}
+
+\Hypertarget{matrix_8cpp_a8838129454e96f6608599019e1e06fe4}\index{matrix.cpp@{matrix.cpp}!print\_matrix@{print\_matrix}}
+\index{print\_matrix@{print\_matrix}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_matrix()}{print\_matrix()}}
+{\footnotesize\ttfamily \label{matrix_8cpp_a8838129454e96f6608599019e1e06fe4} 
+void print\+\_\+matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}}}]{mat}{}\end{DoxyParamCaption})}
+
+
+
+Выводит матрицу в удобочитаемом формате 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em mat} & Матрица для вывода \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}} строка \mbox{\hyperlink{matrix_8cpp_source_l00096}{96}}
+
+
+
+Перекрестные ссылки \mbox{\hyperlink{matrix_8h_source_l00017}{Matrix\+::cols}}, \mbox{\hyperlink{matrix_8h_source_l00015}{Matrix\+::data}} и \mbox{\hyperlink{matrix_8h_source_l00016}{Matrix\+::rows}}.
+
+
+
+Используется в \mbox{\hyperlink{main_8cpp_source_l00030}{test\+\_\+phrase()}}.
+
+\Hypertarget{matrix_8cpp_acbd158760e3fff7679862d23458286b5}\index{matrix.cpp@{matrix.cpp}!string\_to\_matrix@{string\_to\_matrix}}
+\index{string\_to\_matrix@{string\_to\_matrix}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{string\_to\_matrix()}{string\_to\_matrix()}}
+{\footnotesize\ttfamily \label{matrix_8cpp_acbd158760e3fff7679862d23458286b5} 
+\mbox{\hyperlink{struct_matrix}{Matrix}} string\+\_\+to\+\_\+matrix (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{text}{, }\item[{int}]{rows}{, }\item[{int}]{cols}{}\end{DoxyParamCaption})}
+
+
+
+Преобразует строку в матрицу символов 
+
+Текст записывается в матрицу построчно. Если символов меньше, чем ячеек в матрице, остальные ячейки заполняются пробелами.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em text} & Входная строка для преобразования \\
+\hline
+{\em rows} & Количество строк в результирующей матрице \\
+\hline
+{\em cols} & Количество столбцов в результирующей матрице \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+\doxylink{struct_matrix}{Matrix} Матрица, содержащая символы из строки
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Пример\ использования:}}
+\DoxyCodeLine{\mbox{\hyperlink{struct_matrix}{Matrix}}\ mat\ =\ \mbox{\hyperlink{matrix_8h_acbd158760e3fff7679862d23458286b5}{string\_to\_matrix}}(\textcolor{stringliteral}{"{}HELLO"{}},\ 2,\ 3);}
+\DoxyCodeLine{\textcolor{comment}{//\ Результат:}}
+\DoxyCodeLine{\textcolor{comment}{//\ |\ H\ E\ L\ |}}
+\DoxyCodeLine{\textcolor{comment}{//\ |\ L\ O\ \ \ |}}
+
+\end{DoxyCode}
+ 
+
+См. определение в файле \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}} строка \mbox{\hyperlink{matrix_8cpp_source_l00032}{32}}
+
+
+
+Перекрестные ссылки \mbox{\hyperlink{matrix_8cpp_source_l00003}{create\+\_\+matrix()}} и \mbox{\hyperlink{matrix_8h_source_l00015}{Matrix\+::data}}.
+
+
+
+Используется в \mbox{\hyperlink{main_8cpp_source_l00030}{test\+\_\+phrase()}}.
+

@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MatrixProject - Шифровальщик сообщений: Файл src/matrix.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MatrixProject - Шифровальщик сообщений<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Реализация шифра перестановки методом транспонирования матрицы</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('matrix_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл matrix.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="matrix_8h_source.html">../include/matrix.h</a>&quot;</code><br />
+</div>
+<p><a href="matrix_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a00b3eed9347d1300084aa9b4b59faa14" id="r_a00b3eed9347d1300084aa9b4b59faa14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00b3eed9347d1300084aa9b4b59faa14">create_matrix</a> (int rows, int cols)</td></tr>
+<tr class="memdesc:a00b3eed9347d1300084aa9b4b59faa14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает новую матрицу заданного размера  <br /></td></tr>
+<tr class="memitem:a1181a0d8ae532f38fff4b77dff0fb5e5" id="r_a1181a0d8ae532f38fff4b77dff0fb5e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1181a0d8ae532f38fff4b77dff0fb5e5">free_matrix</a> (<a class="el" href="struct_matrix.html">Matrix</a> &amp;mat)</td></tr>
+<tr class="memdesc:a1181a0d8ae532f38fff4b77dff0fb5e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Освобождает память, занятую матрицей  <br /></td></tr>
+<tr class="memitem:acbd158760e3fff7679862d23458286b5" id="r_acbd158760e3fff7679862d23458286b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbd158760e3fff7679862d23458286b5">string_to_matrix</a> (const char *text, int rows, int cols)</td></tr>
+<tr class="memdesc:acbd158760e3fff7679862d23458286b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преобразует строку в матрицу символов  <br /></td></tr>
+<tr class="memitem:a62ecbfd8f86933f9266ae486870f42a2" id="r_a62ecbfd8f86933f9266ae486870f42a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62ecbfd8f86933f9266ae486870f42a2">encrypt</a> (<a class="el" href="struct_matrix.html">Matrix</a> chars)</td></tr>
+<tr class="memdesc:a62ecbfd8f86933f9266ae486870f42a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шифрует матрицу методом транспонирования  <br /></td></tr>
+<tr class="memitem:a73d588a15e8351ecfb0728bfe7b558db" id="r_a73d588a15e8351ecfb0728bfe7b558db"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73d588a15e8351ecfb0728bfe7b558db">decrypt</a> (<a class="el" href="struct_matrix.html">Matrix</a> encrypted)</td></tr>
+<tr class="memdesc:a73d588a15e8351ecfb0728bfe7b558db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Дешифрует матрицу, выполняя обратное транспонирование  <br /></td></tr>
+<tr class="memitem:a082df8e5259ca34f0cab0f5f7c7cea74" id="r_a082df8e5259ca34f0cab0f5f7c7cea74"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a082df8e5259ca34f0cab0f5f7c7cea74">is_perfect_square</a> (int n)</td></tr>
+<tr class="memdesc:a082df8e5259ca34f0cab0f5f7c7cea74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, является ли число полным квадратом  <br /></td></tr>
+<tr class="memitem:a8838129454e96f6608599019e1e06fe4" id="r_a8838129454e96f6608599019e1e06fe4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8838129454e96f6608599019e1e06fe4">print_matrix</a> (<a class="el" href="struct_matrix.html">Matrix</a> mat)</td></tr>
+<tr class="memdesc:a8838129454e96f6608599019e1e06fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит матрицу в удобочитаемом формате  <br /></td></tr>
+<tr class="memitem:a666612825f825ee5db9d15a8ec5d12b0" id="r_a666612825f825ee5db9d15a8ec5d12b0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a666612825f825ee5db9d15a8ec5d12b0">calculate_matrix_size</a> (int text_length)</td></tr>
+<tr class="memdesc:a666612825f825ee5db9d15a8ec5d12b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычисляет оптимальный размер матрицы для текста  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="a666612825f825ee5db9d15a8ec5d12b0" name="a666612825f825ee5db9d15a8ec5d12b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a666612825f825ee5db9d15a8ec5d12b0">&#9670;&#160;</a></span>calculate_matrix_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int calculate_matrix_size </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>text_length</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вычисляет оптимальный размер матрицы для текста </p>
+<p>Функция вычисляет минимальный размер квадратной матрицы, который может вместить все символы текста.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text_length</td><td>Длина текста </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>int Размер матрицы (строки = столбцы = возвращаемое значение)</dd></dl>
+<div class="fragment"><div class="line"><a class="code hl_function" href="matrix_8h.html#a666612825f825ee5db9d15a8ec5d12b0">calculate_matrix_size</a>(9);  <span class="comment">// 3 (3x3=9)</span></div>
+<div class="line"><a class="code hl_function" href="matrix_8h.html#a666612825f825ee5db9d15a8ec5d12b0">calculate_matrix_size</a>(10); <span class="comment">// 4 (4x4=16, хватит для 10 символов)</span></div>
+<div class="ttc" id="amatrix_8h_html_a666612825f825ee5db9d15a8ec5d12b0"><div class="ttname"><a href="matrix_8h.html#a666612825f825ee5db9d15a8ec5d12b0">calculate_matrix_size</a></div><div class="ttdeci">int calculate_matrix_size(int text_length)</div><div class="ttdoc">Вычисляет оптимальный размер матрицы для текста</div><div class="ttdef"><b>Определения</b> <a href="matrix_8cpp_source.html#l00106">matrix.cpp:106</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">См. определение в файле <a class="el" href="matrix_8cpp_source.html">matrix.cpp</a> строка <a class="el" href="matrix_8cpp_source.html#l00106">106</a></p>
+
+<p class="reference">Используется в <a class="el" href="main_8cpp_source.html#l00030">test_phrase()</a>.</p>
+
+</div>
+</div>
+<a id="a00b3eed9347d1300084aa9b4b59faa14" name="a00b3eed9347d1300084aa9b4b59faa14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00b3eed9347d1300084aa9b4b59faa14">&#9670;&#160;</a></span>create_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_matrix.html">Matrix</a> create_matrix </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>rows</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cols</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создает новую матрицу заданного размера </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rows</td><td>Количество строк </td></tr>
+    <tr><td class="paramname">cols</td><td>Количество столбцов </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="struct_matrix.html" title="Структура для представления матрицы символов">Matrix</a> Созданная матрица, заполненная пробелами </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::bad_alloc</td><td>Если не удалось выделить память </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="matrix_8cpp_source.html">matrix.cpp</a> строка <a class="el" href="matrix_8cpp_source.html#l00003">3</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="matrix_8h_source.html#l00017">Matrix::cols</a>, <a class="el" href="matrix_8h_source.html#l00015">Matrix::data</a> и <a class="el" href="matrix_8h_source.html#l00016">Matrix::rows</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="matrix_8cpp_source.html#l00063">decrypt()</a>, <a class="el" href="matrix_8cpp_source.html#l00050">encrypt()</a> и <a class="el" href="matrix_8cpp_source.html#l00032">string_to_matrix()</a>.</p>
+
+</div>
+</div>
+<a id="a73d588a15e8351ecfb0728bfe7b558db" name="a73d588a15e8351ecfb0728bfe7b558db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73d588a15e8351ecfb0728bfe7b558db">&#9670;&#160;</a></span>decrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string decrypt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_matrix.html">Matrix</a></td>          <td class="paramname"><span class="paramname"><em>encrypted</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дешифрует матрицу, выполняя обратное транспонирование </p>
+<p>Функция восстанавливает исходное сообщение из зашифрованной матрицы путем обратного транспонирования.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">encrypted</td><td>Зашифрованная матрица </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>std::string Расшифрованная строка</dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="matrix_8h.html#a62ecbfd8f86933f9266ae486870f42a2" title="Шифрует матрицу методом транспонирования">encrypt</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="matrix_8cpp_source.html">matrix.cpp</a> строка <a class="el" href="matrix_8cpp_source.html#l00063">63</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="matrix_8h_source.html#l00017">Matrix::cols</a>, <a class="el" href="matrix_8cpp_source.html#l00003">create_matrix()</a>, <a class="el" href="matrix_8h_source.html#l00015">Matrix::data</a>, <a class="el" href="matrix_8cpp_source.html#l00020">free_matrix()</a> и <a class="el" href="matrix_8h_source.html#l00016">Matrix::rows</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="main_8cpp_source.html#l00030">test_phrase()</a>.</p>
+
+</div>
+</div>
+<a id="a62ecbfd8f86933f9266ae486870f42a2" name="a62ecbfd8f86933f9266ae486870f42a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62ecbfd8f86933f9266ae486870f42a2">&#9670;&#160;</a></span>encrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_matrix.html">Matrix</a> encrypt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_matrix.html">Matrix</a></td>          <td class="paramname"><span class="paramname"><em>chars</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Шифрует матрицу методом транспонирования </p>
+<p>Функция выполняет транспонирование матрицы - строки становятся столбцами и наоборот. Это основной метод шифрования в проекте.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chars</td><td>Исходная матрица для шифрования </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="struct_matrix.html" title="Структура для представления матрицы символов">Matrix</a> Транспонированная (зашифрованная) матрица</dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="matrix_8h.html#a73d588a15e8351ecfb0728bfe7b558db" title="Дешифрует матрицу, выполняя обратное транспонирование">decrypt</a></dd></dl>
+<div class="fragment"><div class="line"><span class="comment">// Пример:</span></div>
+<div class="line"><span class="comment">// Исходная матрица:</span></div>
+<div class="line"><span class="comment">// | A B |</span></div>
+<div class="line"><span class="comment">// | C D |</span></div>
+<div class="line"><span class="comment">// После encrypt:</span></div>
+<div class="line"><span class="comment">// | A C |</span></div>
+<div class="line"><span class="comment">// | B D |</span></div>
+</div><!-- fragment --> 
+<p class="definition">См. определение в файле <a class="el" href="matrix_8cpp_source.html">matrix.cpp</a> строка <a class="el" href="matrix_8cpp_source.html#l00050">50</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="matrix_8h_source.html#l00017">Matrix::cols</a>, <a class="el" href="matrix_8cpp_source.html#l00003">create_matrix()</a>, <a class="el" href="matrix_8h_source.html#l00015">Matrix::data</a> и <a class="el" href="matrix_8h_source.html#l00016">Matrix::rows</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="main_8cpp_source.html#l00030">test_phrase()</a>.</p>
+
+</div>
+</div>
+<a id="a1181a0d8ae532f38fff4b77dff0fb5e5" name="a1181a0d8ae532f38fff4b77dff0fb5e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1181a0d8ae532f38fff4b77dff0fb5e5">&#9670;&#160;</a></span>free_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_matrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_matrix.html">Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Освобождает память, занятую матрицей </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>Ссылка на матрицу для освобождения </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="matrix_8cpp_source.html">matrix.cpp</a> строка <a class="el" href="matrix_8cpp_source.html#l00020">20</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="matrix_8h_source.html#l00017">Matrix::cols</a>, <a class="el" href="matrix_8h_source.html#l00015">Matrix::data</a> и <a class="el" href="matrix_8h_source.html#l00016">Matrix::rows</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="matrix_8cpp_source.html#l00063">decrypt()</a> и <a class="el" href="main_8cpp_source.html#l00030">test_phrase()</a>.</p>
+
+</div>
+</div>
+<a id="a082df8e5259ca34f0cab0f5f7c7cea74" name="a082df8e5259ca34f0cab0f5f7c7cea74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a082df8e5259ca34f0cab0f5f7c7cea74">&#9670;&#160;</a></span>is_perfect_square()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_perfect_square </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет, является ли число полным квадратом </p>
+<p>Используется для определения, можно ли текст разместить в квадратной матрице без остатка.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Число для проверки </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true Если число является полным квадратом </dd>
+<dd>
+false Если число не является полным квадратом</dd></dl>
+<div class="fragment"><div class="line"><a class="code hl_function" href="matrix_8h.html#a082df8e5259ca34f0cab0f5f7c7cea74">is_perfect_square</a>(9);  <span class="comment">// true (3*3=9)</span></div>
+<div class="line"><a class="code hl_function" href="matrix_8h.html#a082df8e5259ca34f0cab0f5f7c7cea74">is_perfect_square</a>(10); <span class="comment">// false</span></div>
+<div class="ttc" id="amatrix_8h_html_a082df8e5259ca34f0cab0f5f7c7cea74"><div class="ttname"><a href="matrix_8h.html#a082df8e5259ca34f0cab0f5f7c7cea74">is_perfect_square</a></div><div class="ttdeci">bool is_perfect_square(int n)</div><div class="ttdoc">Проверяет, является ли число полным квадратом</div><div class="ttdef"><b>Определения</b> <a href="matrix_8cpp_source.html#l00090">matrix.cpp:90</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">См. определение в файле <a class="el" href="matrix_8cpp_source.html">matrix.cpp</a> строка <a class="el" href="matrix_8cpp_source.html#l00090">90</a></p>
+
+</div>
+</div>
+<a id="a8838129454e96f6608599019e1e06fe4" name="a8838129454e96f6608599019e1e06fe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8838129454e96f6608599019e1e06fe4">&#9670;&#160;</a></span>print_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_matrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_matrix.html">Matrix</a></td>          <td class="paramname"><span class="paramname"><em>mat</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выводит матрицу в удобочитаемом формате </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mat</td><td>Матрица для вывода </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="matrix_8cpp_source.html">matrix.cpp</a> строка <a class="el" href="matrix_8cpp_source.html#l00096">96</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="matrix_8h_source.html#l00017">Matrix::cols</a>, <a class="el" href="matrix_8h_source.html#l00015">Matrix::data</a> и <a class="el" href="matrix_8h_source.html#l00016">Matrix::rows</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="main_8cpp_source.html#l00030">test_phrase()</a>.</p>
+
+</div>
+</div>
+<a id="acbd158760e3fff7679862d23458286b5" name="acbd158760e3fff7679862d23458286b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbd158760e3fff7679862d23458286b5">&#9670;&#160;</a></span>string_to_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_matrix.html">Matrix</a> string_to_matrix </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>rows</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cols</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Преобразует строку в матрицу символов </p>
+<p>Текст записывается в матрицу построчно. Если символов меньше, чем ячеек в матрице, остальные ячейки заполняются пробелами.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Входная строка для преобразования </td></tr>
+    <tr><td class="paramname">rows</td><td>Количество строк в результирующей матрице </td></tr>
+    <tr><td class="paramname">cols</td><td>Количество столбцов в результирующей матрице </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="struct_matrix.html" title="Структура для представления матрицы символов">Matrix</a> Матрица, содержащая символы из строки</dd></dl>
+<div class="fragment"><div class="line"><span class="comment">// Пример использования:</span></div>
+<div class="line"><a class="code hl_struct" href="struct_matrix.html">Matrix</a> mat = <a class="code hl_function" href="matrix_8h.html#acbd158760e3fff7679862d23458286b5">string_to_matrix</a>(<span class="stringliteral">&quot;HELLO&quot;</span>, 2, 3);</div>
+<div class="line"><span class="comment">// Результат:</span></div>
+<div class="line"><span class="comment">// | H E L |</span></div>
+<div class="line"><span class="comment">// | L O   |</span></div>
+<div class="ttc" id="amatrix_8h_html_acbd158760e3fff7679862d23458286b5"><div class="ttname"><a href="matrix_8h.html#acbd158760e3fff7679862d23458286b5">string_to_matrix</a></div><div class="ttdeci">Matrix string_to_matrix(const char *text, int rows, int cols)</div><div class="ttdoc">Преобразует строку в матрицу символов</div><div class="ttdef"><b>Определения</b> <a href="matrix_8cpp_source.html#l00032">matrix.cpp:32</a></div></div>
+<div class="ttc" id="astruct_matrix_html"><div class="ttname"><a href="struct_matrix.html">Matrix</a></div><div class="ttdoc">Структура для представления матрицы символов</div><div class="ttdef"><b>Определения</b> <a href="matrix_8h_source.html#l00014">matrix.h:14</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">См. определение в файле <a class="el" href="matrix_8cpp_source.html">matrix.cpp</a> строка <a class="el" href="matrix_8cpp_source.html#l00032">32</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="matrix_8cpp_source.html#l00003">create_matrix()</a> и <a class="el" href="matrix_8h_source.html#l00015">Matrix::data</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="main_8cpp_source.html#l00030">test_phrase()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="matrix_8cpp.html">matrix.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>
