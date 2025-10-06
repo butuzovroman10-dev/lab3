@@ -1,6 +1,6 @@
 var matrix_8h =
 [
-    [ "Matrix", "struct_matrix.html", "struct_matrix" ],
+    [ "Matrix", "structMatrix.html", "structMatrix" ],
     [ "calculate_matrix_size", "matrix_8h.html#a666612825f825ee5db9d15a8ec5d12b0", null ],
     [ "create_matrix", "matrix_8h.html#a00b3eed9347d1300084aa9b4b59faa14", null ],
     [ "decrypt", "matrix_8h.html#a73d588a15e8351ecfb0728bfe7b558db", null ],

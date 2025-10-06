@@ -1,0 +1,91 @@
+\doxysection{Структура Matrix}
+\hypertarget{structMatrix}{}\label{structMatrix}\index{Matrix@{Matrix}}
+
+
+Структура для представления матрицы символов  
+
+
+
+
+{\ttfamily \#include $<$matrix.\+h$>$}
+
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structMatrix_a10f53199e1e7abd31c091bde65c83025}{data}}
+\begin{DoxyCompactList}\small\item\em Указатель на двумерный массив символов \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structMatrix_a994b1578e9a64d5cc3c4d0b11d7532a9}{rows}}
+\begin{DoxyCompactList}\small\item\em Количество строк в матрице \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structMatrix_a2067cc7ed367cc427cd869b3e1074ad7}{cols}}
+\begin{DoxyCompactList}\small\item\em Количество столбцов в матрице \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Структура для представления матрицы символов 
+
+Используется для хранения текста в виде двумерной матрицы для последующего шифрования методом транспонирования. 
+
+См. определение в файле \mbox{\hyperlink{matrix_8h_source}{matrix.\+h}} строка \mbox{\hyperlink{matrix_8h_source_l00014}{14}}
+
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{structMatrix_a2067cc7ed367cc427cd869b3e1074ad7}\label{structMatrix_a2067cc7ed367cc427cd869b3e1074ad7} 
+\index{Matrix@{Matrix}!cols@{cols}}
+\index{cols@{cols}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{cols}{cols}}
+{\footnotesize\ttfamily int Matrix\+::cols}
+
+
+
+Количество столбцов в матрице 
+
+
+
+См. определение в файле \mbox{\hyperlink{matrix_8h_source}{matrix.\+h}} строка \mbox{\hyperlink{matrix_8h_source_l00017}{17}}
+
+
+
+Используется в \mbox{\hyperlink{matrix_8cpp_source_l00003}{create\+\_\+matrix()}}, \mbox{\hyperlink{matrix_8cpp_source_l00063}{decrypt()}}, \mbox{\hyperlink{matrix_8cpp_source_l00050}{encrypt()}}, \mbox{\hyperlink{matrix_8cpp_source_l00020}{free\+\_\+matrix()}}, \mbox{\hyperlink{matrix_8cpp_source_l00096}{print\+\_\+matrix()}} и \mbox{\hyperlink{main_8cpp_source_l00030}{test\+\_\+phrase()}}.
+
+\Hypertarget{structMatrix_a10f53199e1e7abd31c091bde65c83025}\label{structMatrix_a10f53199e1e7abd31c091bde65c83025} 
+\index{Matrix@{Matrix}!data@{data}}
+\index{data@{data}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily char\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Matrix\+::data}
+
+
+
+Указатель на двумерный массив символов 
+
+
+
+См. определение в файле \mbox{\hyperlink{matrix_8h_source}{matrix.\+h}} строка \mbox{\hyperlink{matrix_8h_source_l00015}{15}}
+
+
+
+Используется в \mbox{\hyperlink{matrix_8cpp_source_l00003}{create\+\_\+matrix()}}, \mbox{\hyperlink{matrix_8cpp_source_l00063}{decrypt()}}, \mbox{\hyperlink{matrix_8cpp_source_l00050}{encrypt()}}, \mbox{\hyperlink{matrix_8cpp_source_l00020}{free\+\_\+matrix()}}, \mbox{\hyperlink{matrix_8cpp_source_l00096}{print\+\_\+matrix()}}, \mbox{\hyperlink{matrix_8cpp_source_l00032}{string\+\_\+to\+\_\+matrix()}} и \mbox{\hyperlink{main_8cpp_source_l00030}{test\+\_\+phrase()}}.
+
+\Hypertarget{structMatrix_a994b1578e9a64d5cc3c4d0b11d7532a9}\label{structMatrix_a994b1578e9a64d5cc3c4d0b11d7532a9} 
+\index{Matrix@{Matrix}!rows@{rows}}
+\index{rows@{rows}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{rows}{rows}}
+{\footnotesize\ttfamily int Matrix\+::rows}
+
+
+
+Количество строк в матрице 
+
+
+
+См. определение в файле \mbox{\hyperlink{matrix_8h_source}{matrix.\+h}} строка \mbox{\hyperlink{matrix_8h_source_l00016}{16}}
+
+
+
+Используется в \mbox{\hyperlink{matrix_8cpp_source_l00003}{create\+\_\+matrix()}}, \mbox{\hyperlink{matrix_8cpp_source_l00063}{decrypt()}}, \mbox{\hyperlink{matrix_8cpp_source_l00050}{encrypt()}}, \mbox{\hyperlink{matrix_8cpp_source_l00020}{free\+\_\+matrix()}}, \mbox{\hyperlink{matrix_8cpp_source_l00096}{print\+\_\+matrix()}} и \mbox{\hyperlink{main_8cpp_source_l00030}{test\+\_\+phrase()}}.
+
+
+
+Объявления и описания членов структуры находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{matrix_8h}{matrix.\+h}}\end{DoxyCompactItemize}

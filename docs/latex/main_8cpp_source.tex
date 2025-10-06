@@ -3,8 +3,7 @@
 \mbox{\hyperlink{main_8cpp}{См. документацию.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00001}00001\ }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00010}00010\ }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{matrix_8h}{../include/matrix.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}../include/matrix.h"{}}}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <iostream>}}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00013}00013\ }
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00030}\mbox{\hyperlink{main_8cpp_aefa0b77e331d081e72b3d6a71fba2399}{00030}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8cpp_aefa0b77e331d081e72b3d6a71fba2399}{test\_phrase}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ phrase,\ \textcolor{keyword}{const}\ std::string\&\ description)\ \{}
@@ -21,23 +20,23 @@
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00041}00041\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Размер\ матрицы:\ "{}}\ <<\ size\ <<\ \textcolor{stringliteral}{"{}x"{}}\ <<\ size\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00042}00042\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{comment}{//\ Создаем\ матрицу\ из\ строки}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{struct_matrix}{Matrix}}\ original\ =\ \mbox{\hyperlink{matrix_8h_acbd158760e3fff7679862d23458286b5}{string\_to\_matrix}}(phrase,\ size,\ size);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{structMatrix}{Matrix}}\ original\ =\ \mbox{\hyperlink{matrix_8h_acbd158760e3fff7679862d23458286b5}{string\_to\_matrix}}(phrase,\ size,\ size);}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00045}00045\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00046}00046\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nИсходная\ матрица:"{}}\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00047}00047\ \ \ \ \ \mbox{\hyperlink{matrix_8h_a8838129454e96f6608599019e1e06fe4}{print\_matrix}}(original);}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00048}00048\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{comment}{//\ Шифруем}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00050}00050\ \ \ \ \ \mbox{\hyperlink{struct_matrix}{Matrix}}\ encrypted\ =\ \mbox{\hyperlink{matrix_8h_a62ecbfd8f86933f9266ae486870f42a2}{encrypt}}(original);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00050}00050\ \ \ \ \ \mbox{\hyperlink{structMatrix}{Matrix}}\ encrypted\ =\ \mbox{\hyperlink{matrix_8h_a62ecbfd8f86933f9266ae486870f42a2}{encrypt}}(original);}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00051}00051\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nЗашифрованная\ матрица\ (транспонированная):"{}}\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00052}00052\ \ \ \ \ \mbox{\hyperlink{matrix_8h_a8838129454e96f6608599019e1e06fe4}{print\_matrix}}(encrypted);}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00053}00053\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{comment}{//\ Показываем\ шифр\ как\ в\ задании\ (чтение\ по\ столбцам\ исходной\ матрицы)}}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00055}00055\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nШифр\ (чтение\ по\ столбцам\ исходной\ матрицы):\ \(\backslash\)"{}"{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ original.\mbox{\hyperlink{struct_matrix_a2067cc7ed367cc427cd869b3e1074ad7}{cols}};\ j++)\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ original.\mbox{\hyperlink{struct_matrix_a994b1578e9a64d5cc3c4d0b11d7532a9}{rows}};\ i++)\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ original.\mbox{\hyperlink{struct_matrix_a10f53199e1e7abd31c091bde65c83025}{data}}[i][j];}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ original.\mbox{\hyperlink{structMatrix_a2067cc7ed367cc427cd869b3e1074ad7}{cols}};\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ original.\mbox{\hyperlink{structMatrix_a994b1578e9a64d5cc3c4d0b11d7532a9}{rows}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ original.\mbox{\hyperlink{structMatrix_a10f53199e1e7abd31c091bde65c83025}{data}}[i][j];}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (j\ <\ original.\mbox{\hyperlink{struct_matrix_a2067cc7ed367cc427cd869b3e1074ad7}{cols}}\ -\/\ 1)\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (j\ <\ original.\mbox{\hyperlink{structMatrix_a2067cc7ed367cc427cd869b3e1074ad7}{cols}}\ -\/\ 1)\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00061}00061\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00062}00062\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}"{}}\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00063}00063\ \ \ \ \ }

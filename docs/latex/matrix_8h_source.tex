@@ -9,31 +9,31 @@
 \DoxyCodeLine{\Hypertarget{matrix_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
 \DoxyCodeLine{\Hypertarget{matrix_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <cstring>}}
 \DoxyCodeLine{\Hypertarget{matrix_8h_source_l00007}00007\ }
-\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00014}\mbox{\hyperlink{struct_matrix}{00014}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
-\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00015}\mbox{\hyperlink{struct_matrix_a10f53199e1e7abd31c091bde65c83025}{00015}}\ \ \ \ \ \textcolor{keywordtype}{char}**\ \mbox{\hyperlink{struct_matrix_a10f53199e1e7abd31c091bde65c83025}{data}};\ \ \ }
-\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00016}\mbox{\hyperlink{struct_matrix_a994b1578e9a64d5cc3c4d0b11d7532a9}{00016}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_matrix_a994b1578e9a64d5cc3c4d0b11d7532a9}{rows}};\ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00017}\mbox{\hyperlink{struct_matrix_a2067cc7ed367cc427cd869b3e1074ad7}{00017}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_matrix_a2067cc7ed367cc427cd869b3e1074ad7}{cols}};\ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00018}00018\ \}\ \mbox{\hyperlink{struct_matrix}{Matrix}};}
+\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00014}\mbox{\hyperlink{structMatrix}{00014}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00015}\mbox{\hyperlink{structMatrix_a10f53199e1e7abd31c091bde65c83025}{00015}}\ \ \ \ \ \textcolor{keywordtype}{char}**\ \mbox{\hyperlink{structMatrix_a10f53199e1e7abd31c091bde65c83025}{data}};\ \ \ }
+\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00016}\mbox{\hyperlink{structMatrix_a994b1578e9a64d5cc3c4d0b11d7532a9}{00016}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structMatrix_a994b1578e9a64d5cc3c4d0b11d7532a9}{rows}};\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00017}\mbox{\hyperlink{structMatrix_a2067cc7ed367cc427cd869b3e1074ad7}{00017}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structMatrix_a2067cc7ed367cc427cd869b3e1074ad7}{cols}};\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00018}00018\ \}\ \mbox{\hyperlink{structMatrix}{Matrix}};}
 \DoxyCodeLine{\Hypertarget{matrix_8h_source_l00019}00019\ }
 \DoxyCodeLine{\Hypertarget{matrix_8h_source_l00020}00020\ \textcolor{comment}{//\ Базовые\ функции\ матриц}}
 \DoxyCodeLine{\Hypertarget{matrix_8h_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00030}00030\ \mbox{\hyperlink{struct_matrix}{Matrix}}\ \mbox{\hyperlink{matrix_8h_a00b3eed9347d1300084aa9b4b59faa14}{create\_matrix}}(\textcolor{keywordtype}{int}\ rows,\ \textcolor{keywordtype}{int}\ cols);}
+\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00030}00030\ \mbox{\hyperlink{structMatrix}{Matrix}}\ \mbox{\hyperlink{matrix_8h_a00b3eed9347d1300084aa9b4b59faa14}{create\_matrix}}(\textcolor{keywordtype}{int}\ rows,\ \textcolor{keywordtype}{int}\ cols);}
 \DoxyCodeLine{\Hypertarget{matrix_8h_source_l00031}00031\ }
-\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00037}00037\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{matrix_8h_aeb634f45f24e14880fefdc366918b590}{free\_matrix}}(\mbox{\hyperlink{struct_matrix}{Matrix}}\&\ m);}
+\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00037}00037\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{matrix_8h_aeb634f45f24e14880fefdc366918b590}{free\_matrix}}(\mbox{\hyperlink{structMatrix}{Matrix}}\&\ m);}
 \DoxyCodeLine{\Hypertarget{matrix_8h_source_l00038}00038\ }
 \DoxyCodeLine{\Hypertarget{matrix_8h_source_l00039}00039\ \textcolor{comment}{//\ Функции\ шифрования}}
 \DoxyCodeLine{\Hypertarget{matrix_8h_source_l00040}00040\ }
-\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00060}00060\ \mbox{\hyperlink{struct_matrix}{Matrix}}\ \mbox{\hyperlink{matrix_8h_acbd158760e3fff7679862d23458286b5}{string\_to\_matrix}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ text,\ \textcolor{keywordtype}{int}\ rows,\ \textcolor{keywordtype}{int}\ cols);}
+\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00060}00060\ \mbox{\hyperlink{structMatrix}{Matrix}}\ \mbox{\hyperlink{matrix_8h_acbd158760e3fff7679862d23458286b5}{string\_to\_matrix}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ text,\ \textcolor{keywordtype}{int}\ rows,\ \textcolor{keywordtype}{int}\ cols);}
 \DoxyCodeLine{\Hypertarget{matrix_8h_source_l00061}00061\ }
-\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00083}00083\ \mbox{\hyperlink{struct_matrix}{Matrix}}\ \mbox{\hyperlink{matrix_8h_a62ecbfd8f86933f9266ae486870f42a2}{encrypt}}(\mbox{\hyperlink{struct_matrix}{Matrix}}\ chars);}
+\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00083}00083\ \mbox{\hyperlink{structMatrix}{Matrix}}\ \mbox{\hyperlink{matrix_8h_a62ecbfd8f86933f9266ae486870f42a2}{encrypt}}(\mbox{\hyperlink{structMatrix}{Matrix}}\ chars);}
 \DoxyCodeLine{\Hypertarget{matrix_8h_source_l00084}00084\ }
-\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00096}00096\ std::string\ \mbox{\hyperlink{matrix_8h_a73d588a15e8351ecfb0728bfe7b558db}{decrypt}}(\mbox{\hyperlink{struct_matrix}{Matrix}}\ encrypted);}
+\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00096}00096\ std::string\ \mbox{\hyperlink{matrix_8h_a73d588a15e8351ecfb0728bfe7b558db}{decrypt}}(\mbox{\hyperlink{structMatrix}{Matrix}}\ encrypted);}
 \DoxyCodeLine{\Hypertarget{matrix_8h_source_l00097}00097\ }
 \DoxyCodeLine{\Hypertarget{matrix_8h_source_l00098}00098\ \textcolor{comment}{//\ Вспомогательные\ функции}}
 \DoxyCodeLine{\Hypertarget{matrix_8h_source_l00099}00099\ }
 \DoxyCodeLine{\Hypertarget{matrix_8h_source_l00115}00115\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{matrix_8h_a082df8e5259ca34f0cab0f5f7c7cea74}{is\_perfect\_square}}(\textcolor{keywordtype}{int}\ n);}
 \DoxyCodeLine{\Hypertarget{matrix_8h_source_l00116}00116\ }
-\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00122}00122\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{matrix_8h_a8838129454e96f6608599019e1e06fe4}{print\_matrix}}(\mbox{\hyperlink{struct_matrix}{Matrix}}\ mat);}
+\DoxyCodeLine{\Hypertarget{matrix_8h_source_l00122}00122\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{matrix_8h_a8838129454e96f6608599019e1e06fe4}{print\_matrix}}(\mbox{\hyperlink{structMatrix}{Matrix}}\ mat);}
 \DoxyCodeLine{\Hypertarget{matrix_8h_source_l00123}00123\ }
 \DoxyCodeLine{\Hypertarget{matrix_8h_source_l00138}00138\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{matrix_8h_a666612825f825ee5db9d15a8ec5d12b0}{calculate\_matrix\_size}}(\textcolor{keywordtype}{int}\ text\_length);}
 

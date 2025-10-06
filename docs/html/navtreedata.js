@@ -51,4 +51,3 @@ var NAVTREEINDEX =
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';
 var SYNCOFFMSG = 'нажмите на включить для синхронизации панелей';
-var LISTOFALLMEMBERS = 'Полный список членов класса';

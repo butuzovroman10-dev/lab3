@@ -3,17 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>MatrixProject - Шифровальщик сообщений: Исходный файл include/matrix.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -35,22 +34,28 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.14.0 -->
+<!-- Создано системой Doxygen 1.9.8 -->
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-</script>
-<script type="text/javascript">
-$(function() { codefold.init(); });
+/* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Поиск',true);
-  $(function() { init_search(); });
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
 });
+/* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -63,9 +68,10 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('matrix_8h_source.html','',''); });
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('matrix_8h_source.html',''); initResizable(); });
+/* @license-end */
 </script>
-<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -98,56 +104,55 @@ $(function(){initNavTree('matrix_8h_source.html','',''); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;cstring&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="struct_matrix.html">   14</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_matrix.html#a10f53199e1e7abd31c091bde65c83025">   15</a></span>    <span class="keywordtype">char</span>** <a class="code hl_variable" href="struct_matrix.html#a10f53199e1e7abd31c091bde65c83025">data</a>;   </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="struct_matrix.html#a994b1578e9a64d5cc3c4d0b11d7532a9">   16</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_matrix.html#a994b1578e9a64d5cc3c4d0b11d7532a9">rows</a>;      </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="struct_matrix.html#a2067cc7ed367cc427cd869b3e1074ad7">   17</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_matrix.html#a2067cc7ed367cc427cd869b3e1074ad7">cols</a>;      </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>} <a class="code hl_struct" href="struct_matrix.html">Matrix</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structMatrix.html">   14</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structMatrix.html#a10f53199e1e7abd31c091bde65c83025">   15</a></span>    <span class="keywordtype">char</span>** <a class="code hl_variable" href="structMatrix.html#a10f53199e1e7abd31c091bde65c83025">data</a>;   </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structMatrix.html#a994b1578e9a64d5cc3c4d0b11d7532a9">   16</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structMatrix.html#a994b1578e9a64d5cc3c4d0b11d7532a9">rows</a>;      </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structMatrix.html#a2067cc7ed367cc427cd869b3e1074ad7">   17</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structMatrix.html#a2067cc7ed367cc427cd869b3e1074ad7">cols</a>;      </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>} <a class="code hl_struct" href="structMatrix.html">Matrix</a>;</div>
 </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// Базовые функции матриц</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><a class="code hl_struct" href="struct_matrix.html">Matrix</a> <a class="code hl_function" href="matrix_8h.html#a00b3eed9347d1300084aa9b4b59faa14">create_matrix</a>(<span class="keywordtype">int</span> rows, <span class="keywordtype">int</span> cols);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> <a class="code hl_function" href="matrix_8h.html#aeb634f45f24e14880fefdc366918b590">free_matrix</a>(<a class="code hl_struct" href="struct_matrix.html">Matrix</a>&amp; m);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><a class="code hl_struct" href="structMatrix.html">Matrix</a> <a class="code hl_function" href="matrix_8h.html#a00b3eed9347d1300084aa9b4b59faa14">create_matrix</a>(<span class="keywordtype">int</span> rows, <span class="keywordtype">int</span> cols);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> <a class="code hl_function" href="matrix_8h.html#aeb634f45f24e14880fefdc366918b590">free_matrix</a>(<a class="code hl_struct" href="structMatrix.html">Matrix</a>&amp; m);</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">// Функции шифрования</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><a class="code hl_struct" href="struct_matrix.html">Matrix</a> <a class="code hl_function" href="matrix_8h.html#acbd158760e3fff7679862d23458286b5">string_to_matrix</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* text, <span class="keywordtype">int</span> rows, <span class="keywordtype">int</span> cols);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><a class="code hl_struct" href="struct_matrix.html">Matrix</a> <a class="code hl_function" href="matrix_8h.html#a62ecbfd8f86933f9266ae486870f42a2">encrypt</a>(<a class="code hl_struct" href="struct_matrix.html">Matrix</a> chars);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>std::string <a class="code hl_function" href="matrix_8h.html#a73d588a15e8351ecfb0728bfe7b558db">decrypt</a>(<a class="code hl_struct" href="struct_matrix.html">Matrix</a> encrypted);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><a class="code hl_struct" href="structMatrix.html">Matrix</a> <a class="code hl_function" href="matrix_8h.html#acbd158760e3fff7679862d23458286b5">string_to_matrix</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* text, <span class="keywordtype">int</span> rows, <span class="keywordtype">int</span> cols);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><a class="code hl_struct" href="structMatrix.html">Matrix</a> <a class="code hl_function" href="matrix_8h.html#a62ecbfd8f86933f9266ae486870f42a2">encrypt</a>(<a class="code hl_struct" href="structMatrix.html">Matrix</a> chars);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>std::string <a class="code hl_function" href="matrix_8h.html#a73d588a15e8351ecfb0728bfe7b558db">decrypt</a>(<a class="code hl_struct" href="structMatrix.html">Matrix</a> encrypted);</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment">// Вспомогательные функции</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="keywordtype">bool</span> <a class="code hl_function" href="matrix_8h.html#a082df8e5259ca34f0cab0f5f7c7cea74">is_perfect_square</a>(<span class="keywordtype">int</span> n);</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keywordtype">void</span> <a class="code hl_function" href="matrix_8h.html#a8838129454e96f6608599019e1e06fe4">print_matrix</a>(<a class="code hl_struct" href="struct_matrix.html">Matrix</a> mat);</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keywordtype">void</span> <a class="code hl_function" href="matrix_8h.html#a8838129454e96f6608599019e1e06fe4">print_matrix</a>(<a class="code hl_struct" href="structMatrix.html">Matrix</a> mat);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="keywordtype">int</span> <a class="code hl_function" href="matrix_8h.html#a666612825f825ee5db9d15a8ec5d12b0">calculate_matrix_size</a>(<span class="keywordtype">int</span> text_length);</div>
-<div class="ttc" id="amatrix_8h_html_a00b3eed9347d1300084aa9b4b59faa14"><div class="ttname"><a href="matrix_8h.html#a00b3eed9347d1300084aa9b4b59faa14">create_matrix</a></div><div class="ttdeci">Matrix create_matrix(int rows, int cols)</div><div class="ttdoc">Создает новую матрицу заданного размера</div><div class="ttdef"><b>Определения</b> <a href="matrix_8cpp_source.html#l00003">matrix.cpp:3</a></div></div>
-<div class="ttc" id="amatrix_8h_html_a082df8e5259ca34f0cab0f5f7c7cea74"><div class="ttname"><a href="matrix_8h.html#a082df8e5259ca34f0cab0f5f7c7cea74">is_perfect_square</a></div><div class="ttdeci">bool is_perfect_square(int n)</div><div class="ttdoc">Проверяет, является ли число полным квадратом</div><div class="ttdef"><b>Определения</b> <a href="matrix_8cpp_source.html#l00090">matrix.cpp:90</a></div></div>
-<div class="ttc" id="amatrix_8h_html_a62ecbfd8f86933f9266ae486870f42a2"><div class="ttname"><a href="matrix_8h.html#a62ecbfd8f86933f9266ae486870f42a2">encrypt</a></div><div class="ttdeci">Matrix encrypt(Matrix chars)</div><div class="ttdoc">Шифрует матрицу методом транспонирования</div><div class="ttdef"><b>Определения</b> <a href="matrix_8cpp_source.html#l00050">matrix.cpp:50</a></div></div>
-<div class="ttc" id="amatrix_8h_html_a666612825f825ee5db9d15a8ec5d12b0"><div class="ttname"><a href="matrix_8h.html#a666612825f825ee5db9d15a8ec5d12b0">calculate_matrix_size</a></div><div class="ttdeci">int calculate_matrix_size(int text_length)</div><div class="ttdoc">Вычисляет оптимальный размер матрицы для текста</div><div class="ttdef"><b>Определения</b> <a href="matrix_8cpp_source.html#l00106">matrix.cpp:106</a></div></div>
-<div class="ttc" id="amatrix_8h_html_a73d588a15e8351ecfb0728bfe7b558db"><div class="ttname"><a href="matrix_8h.html#a73d588a15e8351ecfb0728bfe7b558db">decrypt</a></div><div class="ttdeci">std::string decrypt(Matrix encrypted)</div><div class="ttdoc">Дешифрует матрицу, выполняя обратное транспонирование</div><div class="ttdef"><b>Определения</b> <a href="matrix_8cpp_source.html#l00063">matrix.cpp:63</a></div></div>
-<div class="ttc" id="amatrix_8h_html_a8838129454e96f6608599019e1e06fe4"><div class="ttname"><a href="matrix_8h.html#a8838129454e96f6608599019e1e06fe4">print_matrix</a></div><div class="ttdeci">void print_matrix(Matrix mat)</div><div class="ttdoc">Выводит матрицу в удобочитаемом формате</div><div class="ttdef"><b>Определения</b> <a href="matrix_8cpp_source.html#l00096">matrix.cpp:96</a></div></div>
-<div class="ttc" id="amatrix_8h_html_acbd158760e3fff7679862d23458286b5"><div class="ttname"><a href="matrix_8h.html#acbd158760e3fff7679862d23458286b5">string_to_matrix</a></div><div class="ttdeci">Matrix string_to_matrix(const char *text, int rows, int cols)</div><div class="ttdoc">Преобразует строку в матрицу символов</div><div class="ttdef"><b>Определения</b> <a href="matrix_8cpp_source.html#l00032">matrix.cpp:32</a></div></div>
-<div class="ttc" id="amatrix_8h_html_aeb634f45f24e14880fefdc366918b590"><div class="ttname"><a href="matrix_8h.html#aeb634f45f24e14880fefdc366918b590">free_matrix</a></div><div class="ttdeci">void free_matrix(Matrix &amp;m)</div><div class="ttdoc">Освобождает память, занятую матрицей</div><div class="ttdef"><b>Определения</b> <a href="matrix_8cpp_source.html#l00020">matrix.cpp:20</a></div></div>
-<div class="ttc" id="astruct_matrix_html"><div class="ttname"><a href="struct_matrix.html">Matrix</a></div><div class="ttdoc">Структура для представления матрицы символов</div><div class="ttdef"><b>Определения</b> <a href="#l00014">matrix.h:14</a></div></div>
-<div class="ttc" id="astruct_matrix_html_a10f53199e1e7abd31c091bde65c83025"><div class="ttname"><a href="struct_matrix.html#a10f53199e1e7abd31c091bde65c83025">Matrix::data</a></div><div class="ttdeci">char ** data</div><div class="ttdoc">Указатель на двумерный массив символов</div><div class="ttdef"><b>Определения</b> <a href="#l00015">matrix.h:15</a></div></div>
-<div class="ttc" id="astruct_matrix_html_a2067cc7ed367cc427cd869b3e1074ad7"><div class="ttname"><a href="struct_matrix.html#a2067cc7ed367cc427cd869b3e1074ad7">Matrix::cols</a></div><div class="ttdeci">int cols</div><div class="ttdoc">Количество столбцов в матрице</div><div class="ttdef"><b>Определения</b> <a href="#l00017">matrix.h:17</a></div></div>
-<div class="ttc" id="astruct_matrix_html_a994b1578e9a64d5cc3c4d0b11d7532a9"><div class="ttname"><a href="struct_matrix.html#a994b1578e9a64d5cc3c4d0b11d7532a9">Matrix::rows</a></div><div class="ttdeci">int rows</div><div class="ttdoc">Количество строк в матрице</div><div class="ttdef"><b>Определения</b> <a href="#l00016">matrix.h:16</a></div></div>
+<div class="ttc" id="amatrix_8h_html_a00b3eed9347d1300084aa9b4b59faa14"><div class="ttname"><a href="matrix_8h.html#a00b3eed9347d1300084aa9b4b59faa14">create_matrix</a></div><div class="ttdeci">Matrix create_matrix(int rows, int cols)</div><div class="ttdoc">Создает новую матрицу заданного размера</div><div class="ttdef"><b>Definition</b> <a href="matrix_8cpp_source.html#l00003">matrix.cpp:3</a></div></div>
+<div class="ttc" id="amatrix_8h_html_a082df8e5259ca34f0cab0f5f7c7cea74"><div class="ttname"><a href="matrix_8h.html#a082df8e5259ca34f0cab0f5f7c7cea74">is_perfect_square</a></div><div class="ttdeci">bool is_perfect_square(int n)</div><div class="ttdoc">Проверяет, является ли число полным квадратом</div><div class="ttdef"><b>Definition</b> <a href="matrix_8cpp_source.html#l00090">matrix.cpp:90</a></div></div>
+<div class="ttc" id="amatrix_8h_html_a62ecbfd8f86933f9266ae486870f42a2"><div class="ttname"><a href="matrix_8h.html#a62ecbfd8f86933f9266ae486870f42a2">encrypt</a></div><div class="ttdeci">Matrix encrypt(Matrix chars)</div><div class="ttdoc">Шифрует матрицу методом транспонирования</div><div class="ttdef"><b>Definition</b> <a href="matrix_8cpp_source.html#l00050">matrix.cpp:50</a></div></div>
+<div class="ttc" id="amatrix_8h_html_a666612825f825ee5db9d15a8ec5d12b0"><div class="ttname"><a href="matrix_8h.html#a666612825f825ee5db9d15a8ec5d12b0">calculate_matrix_size</a></div><div class="ttdeci">int calculate_matrix_size(int text_length)</div><div class="ttdoc">Вычисляет оптимальный размер матрицы для текста</div><div class="ttdef"><b>Definition</b> <a href="matrix_8cpp_source.html#l00106">matrix.cpp:106</a></div></div>
+<div class="ttc" id="amatrix_8h_html_a73d588a15e8351ecfb0728bfe7b558db"><div class="ttname"><a href="matrix_8h.html#a73d588a15e8351ecfb0728bfe7b558db">decrypt</a></div><div class="ttdeci">std::string decrypt(Matrix encrypted)</div><div class="ttdoc">Дешифрует матрицу, выполняя обратное транспонирование</div><div class="ttdef"><b>Definition</b> <a href="matrix_8cpp_source.html#l00063">matrix.cpp:63</a></div></div>
+<div class="ttc" id="amatrix_8h_html_a8838129454e96f6608599019e1e06fe4"><div class="ttname"><a href="matrix_8h.html#a8838129454e96f6608599019e1e06fe4">print_matrix</a></div><div class="ttdeci">void print_matrix(Matrix mat)</div><div class="ttdoc">Выводит матрицу в удобочитаемом формате</div><div class="ttdef"><b>Definition</b> <a href="matrix_8cpp_source.html#l00096">matrix.cpp:96</a></div></div>
+<div class="ttc" id="amatrix_8h_html_acbd158760e3fff7679862d23458286b5"><div class="ttname"><a href="matrix_8h.html#acbd158760e3fff7679862d23458286b5">string_to_matrix</a></div><div class="ttdeci">Matrix string_to_matrix(const char *text, int rows, int cols)</div><div class="ttdoc">Преобразует строку в матрицу символов</div><div class="ttdef"><b>Definition</b> <a href="matrix_8cpp_source.html#l00032">matrix.cpp:32</a></div></div>
+<div class="ttc" id="amatrix_8h_html_aeb634f45f24e14880fefdc366918b590"><div class="ttname"><a href="matrix_8h.html#aeb634f45f24e14880fefdc366918b590">free_matrix</a></div><div class="ttdeci">void free_matrix(Matrix &amp;m)</div><div class="ttdoc">Освобождает память, занятую матрицей</div><div class="ttdef"><b>Definition</b> <a href="matrix_8cpp_source.html#l00020">matrix.cpp:20</a></div></div>
+<div class="ttc" id="astructMatrix_html"><div class="ttname"><a href="structMatrix.html">Matrix</a></div><div class="ttdoc">Структура для представления матрицы символов</div><div class="ttdef"><b>Definition</b> <a href="matrix_8h_source.html#l00014">matrix.h:14</a></div></div>
+<div class="ttc" id="astructMatrix_html_a10f53199e1e7abd31c091bde65c83025"><div class="ttname"><a href="structMatrix.html#a10f53199e1e7abd31c091bde65c83025">Matrix::data</a></div><div class="ttdeci">char ** data</div><div class="ttdoc">Указатель на двумерный массив символов</div><div class="ttdef"><b>Definition</b> <a href="matrix_8h_source.html#l00015">matrix.h:15</a></div></div>
+<div class="ttc" id="astructMatrix_html_a2067cc7ed367cc427cd869b3e1074ad7"><div class="ttname"><a href="structMatrix.html#a2067cc7ed367cc427cd869b3e1074ad7">Matrix::cols</a></div><div class="ttdeci">int cols</div><div class="ttdoc">Количество столбцов в матрице</div><div class="ttdef"><b>Definition</b> <a href="matrix_8h_source.html#l00017">matrix.h:17</a></div></div>
+<div class="ttc" id="astructMatrix_html_a994b1578e9a64d5cc3c4d0b11d7532a9"><div class="ttname"><a href="structMatrix.html#a994b1578e9a64d5cc3c4d0b11d7532a9">Matrix::rows</a></div><div class="ttdeci">int rows</div><div class="ttdoc">Количество строк в матрице</div><div class="ttdef"><b>Definition</b> <a href="matrix_8h_source.html#l00016">matrix.h:16</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="matrix_8h.html">matrix.h</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="matrix_8h.html">matrix.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
